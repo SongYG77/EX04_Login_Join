@@ -24,9 +24,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="로그인 상태: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raj-za-G7z">
-                                <rect key="frame" x="50" y="289" width="175" height="56"/>
+                                <rect key="frame" x="50" y="289" width="316" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -44,21 +44,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="로그아웃"/>
+                                <connections>
+                                    <action selector="onbtnLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0R-Sv-mAe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="GBE-yt-WFB"/>
+                    <connections>
+                        <outlet property="LoginStatas" destination="Raj-za-G7z" id="K7S-Ug-2v6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="569.56521739130437" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tEv-KK-aE4">
             <objects>
-                <viewController id="wMi-qk-81N" sceneMemberID="viewController">
+                <viewController id="wMi-qk-81N" customClass="LoginViewController" customModule="EX04_Login_Join" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0HN-y6-852">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +93,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="로그인"/>
+                                <connections>
+                                    <action selector="onbtnLogin:" destination="wMi-qk-81N" eventType="touchUpInside" id="Upm-Yi-EWd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOc-Uv-gv0">
                                 <rect key="frame" x="128" y="485" width="146" height="57"/>
@@ -102,15 +111,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="QEG-lZ-l4N"/>
+                    <connections>
+                        <outlet property="tfID" destination="7xy-RZ-wzi" id="y8L-yq-a6t"/>
+                        <outlet property="tfpassword" destination="jZH-bH-kxf" id="kxg-RU-nZ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIV-HY-hgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1273.913043478261" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Join View Controller-->
         <scene sceneID="cnA-wI-fOv">
             <objects>
-                <viewController id="rbs-Vc-HRC" sceneMemberID="viewController">
+                <viewController id="rbs-Vc-HRC" customClass="JoinViewController" customModule="EX04_Login_Join" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ene-Ao-Hve">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,6 +164,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="회원가입"/>
+                                <connections>
+                                    <action selector="onbtnJoin:" destination="rbs-Vc-HRC" eventType="touchUpInside" id="xjW-C7-3aR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH2-ie-H5z">
                                 <rect key="frame" x="134" y="600" width="146" height="57"/>
@@ -166,6 +182,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="4IA-2H-uoJ"/>
+                    <connections>
+                        <outlet property="tfid" destination="1zN-eX-PoS" id="uCj-0K-wgH"/>
+                        <outlet property="tfname" destination="jXF-oA-CcS" id="HXV-Hu-s5l"/>
+                        <outlet property="tfphone" destination="5wo-Df-zXe" id="HdM-38-u17"/>
+                        <outlet property="tfpw" destination="nox-mJ-jOa" id="sJ1-2N-bBO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Faa-iA-ifU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="-204.34782608695653" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Agree View Controller-->
         <scene sceneID="ADP-PF-EjN">
             <objects>
-                <viewController id="Rn6-gH-nxi" sceneMemberID="viewController">
+                <viewController id="Rn6-gH-nxi" customClass="AgreeViewController" customModule="EX04_Login_Join" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2hL-L6-dJY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,6 +240,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="완료"/>
+                                <connections>
+                                    <action selector="onbtnDone:" destination="Rn6-gH-nxi" eventType="touchUpInside" id="c6f-FM-zSW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="약관 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWv-b0-rk9">
                                 <rect key="frame" x="80" y="540" width="98" height="41"/>
@@ -229,6 +254,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MI7-cZ-ygU">
                                 <rect key="frame" x="259" y="545" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onswitchAgree:" destination="Rn6-gH-nxi" eventType="valueChanged" id="Uiw-f7-4r0"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="moz-K4-2Ea"/>
